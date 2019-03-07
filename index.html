@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Maybe-crazy things to do with inline SVG in Drupal 8</h1>
+				</section>
+				<section>
+					<h1>Audrey Brockhaus</h1>
+					<h3>FE Developer at meltmedia</h3>
+					<h3>Twitter: @AudreyBrockhaus</h3>
+					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+				</section>
+				<section>
+					SVG can do some wild stuff.
+				</section>
+				<section>
+					<h4>😀 ↔️ ☹️ (Happy ↔️ Sad) by Chris Gannon</h4>
+					<p class="codepen" data-height="500" data-theme-id="36307" data-default-tab="result" data-user="chrisgannon" data-slug-hash="WpjXVr" style="height: 359px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="😀 ↔️ ☹️ (Happy ↔️ Sad)">
+						<span>See the Pen <a href="https://codepen.io/chrisgannon/pen/WpjXVr/">
+						😀 ↔️ ☹️ (Happy ↔️ Sad)</a> by Chris Gannon (<a href="https://codepen.io/chrisgannon">@chrisgannon</a>)
+						on <a href="https://codepen.io">CodePen</a>.</span>
+					</p>
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+				<section>
+					<h4>SVG interactive blobs by Kevin Levron</h4>
+					<!-- <p class="codepen" data-height="300" data-theme-id="36307" data-default-tab="js,result" data-user="soju22" data-slug-hash="mvYrON" data-preview="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="SVG interactive blobs">
+  <span>See the Pen <a href="https://codepen.io/soju22/pen/mvYrON/">
+  SVG interactive blobs</a> by Kevin LEVRON (<a href="https://codepen.io/soju22">@soju22</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+				</section>
+				<section>
+						<h2>Using SVG: Easy Mode</h2>
+						<pre>
+							<code datatrim>
+&lt;img src=&quot;/picture.svg&quot;&gt;
+							</code>
+						</pre>
+				</section>
+				<section>
+						<h2>Using SVG: Fun Mode (inline)</h2>
+						<pre>
+						<code datatrim>
+&lt;ul&gt;&#10; &lt;li&gt;&#10;  &lt;a href=&quot;/home&quot;&gt;&#10;   &lt;svg viewBox=&quot;0 0 200 200&quot; width=&quot;400&quot;  height=&quot;400&quot;&#10;   xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&#10;    &lt;circle cx=&quot;102&quot; cy=&quot;100&quot; fill=&quot;#ff0&quot; r=&quot;78&quot;&#10;    stroke=&quot;#000&quot; stroke-width=&quot;3&quot;/&gt;&#10;...etc.
+						</code>
+						</pre>
+				</section>
+				<section>
+					<img src="/lib/img/code.png" alt="">
+				</section>
+				<section>
+					<h2>Twig Includes</h2>
+					<section>
+						<pre>
+							<code datatrim>
+{% include (&OpenCurlyQuote;path/to/file/picture.svg&rsquor;) %}
+							</code>
+						</pre>
+						<p>&#8593; points to docroot</p>
+					</section>
+					<section>	
+						<pre>
+							<code datatrim>
+{% include (&OpenCurlyQuote;@theme_name/picture.svg&rsquor;) %} 
+							</code>
+						</pre>
+						<p>&#8593; points to theme’s templates folder</p>
+					</section>
+					<section>	
+						<pre>
+							<code datatrim>
+{% include (&OpenCurlyQuote;@theme_name/../images/picture.svg&rsquor;) %}
+							</code>
+						</pre>
+						<p>&#8593; points to theme’s images folder</p>
+					</section>
+				</section>
+				<section>
+						<h1>Anatomy of an SVG<h1>
+				</section>
+				<section>
+					<img src="lib/img/png.png" alt="">
+				</section>
+				<section>
+					<p class="codepen" data-height="461" data-theme-id="0" data-default-tab="html,result" data-user="audreybrockhaus" data-slug-hash="pYEamK" data-editable="true" style="height: 461px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Simple SVG Smiley Face">
+						<span>See the Pen <a href="https://codepen.io/audreybrockhaus/pen/pYEamK/">
+						Simple SVG Smiley Face</a> by Audrey Brockhaus (<a href="https://codepen.io/audreybrockhaus">@audreybrockhaus</a>)
+						on <a href="https://codepen.io">CodePen</a>.</span>
+					</p>
+				</section>
+				<section>
+					<h1>Twig Include</h1>
+					<h3>FE Developer at meltmedia</h3>
+					<h3>Twitter: @AudreyBrockhaus</h3>
+					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+				</section>
+				<section>
+					<h1>Audrey Brockhaus</h1>
+					<h3>FE Developer at meltmedia</h3>
+					<h3>Twitter: @AudreyBrockhaus</h3>
+					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+				</section>
+				<section>
+					<h1>Audrey Brockhaus</h1>
+					<h3>FE Developer at meltmedia</h3>
+					<h3>Twitter: @AudreyBrockhaus</h3>
+					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+				</section>
+				<section>
+					<h1>Audrey Brockhaus</h1>
+					<h3>FE Developer at meltmedia</h3>
+					<h3>Twitter: @AudreyBrockhaus</h3>
+					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
