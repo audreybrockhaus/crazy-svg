@@ -4,11 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Maybe-Crazy Things to do with Inline SVG in Drupal 8</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
-
+		<link rel="stylesheet" href="css/theme/custom.css">
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -20,25 +19,99 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script
+		src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					<h1>Maybe-crazy things to do with inline SVG in Drupal 8</h1>
+				<section data-background-image="lib/img/front-01.svg">
+					<h1 class="splash"><div class="before">
+						<div class="scroll-left">
+						</div>
+					</div>
+					<span class="white animated block">Maybe-crazy</span>
+					<div class="after">
+						<div class="scroll-right">
+						</div>
+					</div> <span class="white block">things to do with</span> inline SVG <img src="lib/img/in.svg" alt="" class="title-word"> <span class="light">Drupal 8</span></h1>
+				</section>
+				<section data-background-position="20%" data-background-image="lib/img/teal-dot-stripe-01.svg" data-background-size="contain">
+					<div class="row">
+						<div class="col col-25">
+							<img src="lib/img/audrey.png" alt="">
+						</div>
+						<div class="col col-75">
+							<h1 class="white lh1 m0">Audrey <span class="white light name">Brockhaus</span></h1>
+							<img src="lib/img/squiggle.svg" alt="" class="block-margin">
+							<table class="no-border">
+								<tr>
+									<td><img src="lib/img/meltmedia.svg" alt="" class="icon" width="50" height="50"></td>
+									<td><h6>FE Developer at meltmedia</h6></td>
+								</tr>
+								<tr>
+									<td><img src="lib/img/heart.svg" alt="" class="icon"></td>
+									<td><h6>CSS, SVG, and doing questionable things in Twig templates</h6></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<aside class="notes">
+						A little bit about me. My skills are in the front end of the front end-html--I love taking designs and breaking them out into HTML, CSS, and presentational javascipt. So in drupal terms, I am a themer. I was introduced to Drupal 
+					</aside>
+				</section>
+				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
+					<img src="lib/img/me3.jpg" alt="">
 				</section>
 				<section>
-					<h1>Audrey Brockhaus</h1>
-					<h3>FE Developer at meltmedia</h3>
-					<h3>Twitter: @AudreyBrockhaus</h3>
-					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+					<h4>Differences between SVG and other web&nbsp;image&nbsp;formats</h4>
+					<table class="white-table">
+						<tr>
+							<th width="50%">jpeg, png, gif</th>
+							<th>SVG</th>
+						</tr>
+						<tr>
+							<td>
+								Raster (resolution dependent)
+							</td>
+							<td>
+								Vector (resolution independent)								
+							</td>
+						</tr>
+						<tr>
+							<td>								
+								Binary
+							</td>
+							<td>
+								Test-based, XML markup, <strong>human readable-<em>ish</em> and human writable-<em>ish</em></strong>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Elements within the image not selectable in browser
+							</td>
+							<td>
+								Selectable in browser (drawn by browser, can be changed in browser!)
+							</td>
+						</tr>
+					</table>
 				</section>
-				<section>
-					SVG can do some wild stuff.
+				<section data-background-image="lib/img/circle-bg-01.svg">
+					<div class="after-block">
+						<div class="scroll-right">
+						</div>
+					</div>
+					<h2 class="squiggle-h2">SVG can do some wild stuff.</h2>
+					<div class="after-block">
+						<div class="scroll-right">
+						</div>
+					</div>
 				</section>
-				<section>
-					<h4>😀 ↔️ ☹️ (Happy ↔️ Sad) by Chris Gannon</h4>
-					<p class="codepen" data-height="500" data-theme-id="36307" data-default-tab="result" data-user="chrisgannon" data-slug-hash="WpjXVr" style="height: 359px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="😀 ↔️ ☹️ (Happy ↔️ Sad)">
+				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
+					<h4>(Happy ↔ Sad) by Chris Gannon</h4>
+					<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="chrisgannon" data-slug-hash="WpjXVr" style="height: 359px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="😀 ↔️ ☹️ (Happy ↔️ Sad)">
 						<span>See the Pen <a href="https://codepen.io/chrisgannon/pen/WpjXVr/">
 						😀 ↔️ ☹️ (Happy ↔️ Sad)</a> by Chris Gannon (<a href="https://codepen.io/chrisgannon">@chrisgannon</a>)
 						on <a href="https://codepen.io">CodePen</a>.</span>
@@ -46,35 +119,35 @@
 					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 				</section>
 				<section>
-					<h4>SVG interactive blobs by Kevin Levron</h4>
-					<!-- <p class="codepen" data-height="300" data-theme-id="36307" data-default-tab="js,result" data-user="soju22" data-slug-hash="mvYrON" data-preview="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="SVG interactive blobs">
-  <span>See the Pen <a href="https://codepen.io/soju22/pen/mvYrON/">
-  SVG interactive blobs</a> by Kevin LEVRON (<a href="https://codepen.io/soju22">@soju22</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+					<h4>SVG interactive web by Blaz Kemperle</h4>
+					<!-- <p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="blazicke" data-slug-hash="jyPVda" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Svg Interactive Web">
+						<span>See the Pen <a href="https://codepen.io/blazicke/pen/jyPVda/">
+						Svg Interactive Web</a> by Blaz Kemperle (<a href="https://codepen.io/blazicke">@blazicke</a>)
+						on <a href="https://codepen.io">CodePen</a>.</span>
+					</p>
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
 				</section>
 				<section>
-						<h2>Using SVG: Easy Mode</h2>
+						<h1><span class="white light">Using SVG:</span> <span class="black">Easy Mode</span></h1><img src="lib/img/squiggle.svg" alt="" class="block centered">
 						<pre>
 							<code datatrim>
-&lt;img src=&quot;/picture.svg&quot;&gt;
+&lt;img src=&quot;picture.svg&quot;&gt;
 							</code>
 						</pre>
 				</section>
 				<section>
-						<h2>Using SVG: Fun Mode (inline)</h2>
+						<h1><span class="white light">Using SVG:</span> <span class="black">Fun Mode </span></h1><img src="lib/img/squiggle.svg" alt="" class="block centered">
 						<pre>
 						<code datatrim>
 &lt;ul&gt;&#10; &lt;li&gt;&#10;  &lt;a href=&quot;/home&quot;&gt;&#10;   &lt;svg viewBox=&quot;0 0 200 200&quot; width=&quot;400&quot;  height=&quot;400&quot;&#10;   xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&#10;    &lt;circle cx=&quot;102&quot; cy=&quot;100&quot; fill=&quot;#ff0&quot; r=&quot;78&quot;&#10;    stroke=&quot;#000&quot; stroke-width=&quot;3&quot;/&gt;&#10;...etc.
 						</code>
 						</pre>
 				</section>
-				<section>
-					<img src="/lib/img/code.png" alt="">
+				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
+					<img src="lib/img/code.png" alt="">
 				</section>
 				<section>
-					<h2>Twig Includes</h2>
+					<h1 class="light">Twig Includes</h1>
 					<section>
 						<pre>
 							<code datatrim>
@@ -100,45 +173,366 @@
 						<p>&#8593; points to theme’s images folder</p>
 					</section>
 				</section>
-				<section>
-						<h1>Anatomy of an SVG<h1>
+				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
+					<img src="lib/img/code2.png" alt="">
 				</section>
-				<section>
+				<section data-background-image="lib/img/circle-bg-01.svg">
+					<h2 class="squiggle-h2">Anatomy of an SVG</h2>
+				</section>
+				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<img src="lib/img/png.png" alt="">
 				</section>
+				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
+					<p class="codepen" data-height="460" data-theme-id="36307" data-default-tab="html,result" data-user="audreybrockhaus" data-slug-hash="pYEamK" data-editable="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Simple SVG Smiley Face">
+							<span>See the Pen <a href="https://codepen.io/audreybrockhaus/pen/pYEamK/">
+							Simple SVG Smiley Face</a> by Audrey Brockhaus (<a href="https://codepen.io/audreybrockhaus">@audreybrockhaus</a>)
+							on <a href="https://codepen.io">CodePen</a>.</span>
+						</p>
+						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+				<section data-background-image="lib/img/circle-bg-01.svg">
+					<h2 class="squiggle-h2">Animate your inline SVG with CSS</h2>
+				</section>
 				<section>
-					<p class="codepen" data-height="461" data-theme-id="0" data-default-tab="html,result" data-user="audreybrockhaus" data-slug-hash="pYEamK" data-editable="true" style="height: 461px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Simple SVG Smiley Face">
-						<span>See the Pen <a href="https://codepen.io/audreybrockhaus/pen/pYEamK/">
-						Simple SVG Smiley Face</a> by Audrey Brockhaus (<a href="https://codepen.io/audreybrockhaus">@audreybrockhaus</a>)
+					<h1>“Propertunities” &amp; “Attribilities”</h1>
+					<p class="small"><em>I’m so sorry</em></p>
+				</section>
+				<section>
+					<h4>Common SVG Presentation Attributes for Shapes</h4>
+					<table class="white-table">
+						<tr>
+							<th width="25%">Properties</th>
+							<th>Values</th>
+							<th>Examples</th>
+						</tr>
+						<tr>
+							<td>
+								<p><strong>fill</strong></p>
+								<p>Default: black</p>
+							</td>
+							<td>
+								<p><strong>Color:</strong> defined as hex code, rgb, or even as a color keyword like `green`</p>
+								<p><strong>Pattern or Gradient:</strong> Defined in the “defs” region of your SVG</p>									
+							</td>
+							<td>
+								<p>fill=”none”</p>
+								<p>fill=”#eeeeee”</p>
+								<p>fill=”rgb(0,0,255)”</p>
+								<p>fill=”peachPuff”</p>
+								<p>fill=”url(#rainbow)”</p>									
+							</td>
+						</tr>
+						<tr>
+						<td>								
+								<p><strong>opacity</strong></p>
+								<p>Default: 1</p></td>
+							<td>
+								<p>Decimal value between 0 and 1.</p>
+								<p>Can also separately set “fill-opacity” and “stroke-opacity”</p>
+							</td>
+							<td>
+								opacity="0.6"
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><strong>stroke</strong></p>
+								<p>Default: none</p>
+							</td>
+							<td>
+								<p>Color, Pattern, or Gradient, same as Fill values above</p>
+							</td>
+							<td>
+								<p>stroke=”green”</p>
+								<p>stroke=”url(#rainbow)”</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<p><strong>stroke-width</strong></p>
+								<p>Default: 1</p>
+							</td>
+							<td>
+								<p>A number, in viewport units or a % of viewport</p>
+							</td>
+							<td>
+								<p>stroke-width=”5”</p>
+								<p>stroke-width=”20%”</p>									
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h4>Super-average icons</h4>
+					<img src="lib/img/teal-icons.png" alt="">
+					<h4>....not so easy to implement</h4>
+				</section>
+				<section>
+					<h2><span class="light">Super-average icons:</span> Potential structure</h2>
+					<table class="white-table table-big">
+						<tr>
+							<td><strong>Taxonomy term:</strong></td>
+							<td colspan="2">Product category (Example: Camping)</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td></td>
+							<td><strong>Example values</strong></td>
+						</tr>
+						<tr>
+							<td><strong>Taxonomy fields:</strong></td>
+							<td>
+									<p>Product category color</p>
+									<p><em>(using Color Field module)</em></p>
+									<p>Trash icon</p>
+									<p>Download icon</p>
+									<p>Picture icon</p>
+									<p>Share icon</p>
+									<p>Idea icon</p>
+							</td>
+							<td>
+									<p>#008000</p>
+									<p>&nbsp;</p>
+									<p>trash-green.png</p>
+									<p>download-green.png</p>
+									<p>picture-green.png</p>
+									<p>share-green.png</p>
+									<p>idea-green.png</p>
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h4>Using variables in SVG</h4>
+					<pre>
+						<code datatrim>
+&lt;path fill=&quot;{{ node.field_product_line_color|field_value }}&quot; 
+d=&quot;M256,512C114.842,512,0,397.158,0,256c0-62.431,22.727-
+122.565,63.994-169.326c5.504-6.237,15....12z&quot;/&gt;					
+						</code>
+					</pre>
+					<p class="small">Example code using Color Field Module and Field Value module</p> 
+				</section>
+				<section>
+						<h2>Color-flexible icons</h2>
+						<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="audreybrockhaus" data-slug-hash="zbMXZd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Color-Flexible Icons">
+							<span>See the Pen <a href="https://codepen.io/audreybrockhaus/pen/zbMXZd/">
+							Color-Flexible Icons</a> by Audrey Brockhaus (<a href="https://codepen.io/audreybrockhaus">@audreybrockhaus</a>)
+							on <a href="https://codepen.io">CodePen</a>.</span>
+						</p>
+						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+				</section>
+				<section>
+					<h2><span class="light">Super-average Icons:</span> Structure with inline&nbsp;SVG</h2>
+					<table class="white-table table-big">
+						<tr>
+							<td><strong>Taxonomy term:</strong></td>
+							<td colspan="2">Product category (Example: Camping)</td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td></td>
+							<td><strong>Example values</strong></td>
+						</tr>
+						<tr>
+							<td><strong>Taxonomy fields:</strong></td>
+							<td>
+									<p>Product category color</p>
+									<p><em>(using Color Field module)</em></p>
+									<p><del>Trash icon</del></p>
+									<p><del>Download icon</del></p>
+									<p><del>Picture icon</del></p>
+									<p><del>Share icon</del></p>
+									<p><del>Idea icon</del></p>
+							</td>
+							<td>
+									<p>#008000</p>
+									<p>&nbsp;</p>
+									<p><del>trash-green.png</del></p>
+									<p><del>download-green.png</del></p>
+									<p><del>picture-green.png</del></p>
+									<p><del>share-green.png</del></p>
+									<p><del>idea-green.png</del></p>
+							</td>
+						</tr>
+					</table>
+				</section>
+				<section data-background-image="lib/img/circle-bg-01.svg">
+					<h2 class="squiggle-h2">Custom Avatars</h2>
+				</section>
+				<section id="filter">
+					<h1><span class="white light">SVG</span> <span class="black">Filters</span></h1>
+					<img src="lib/img/daisy.jpg" alt="" width="850">
+				</section>
+				<section data-background-image="lib/img/circle-bg-01.svg">
+					<h2 class="squiggle-h2">SVG Text and Raster Images</h2>
+				</section>
+				<section>
+					<h4>Text in SVG</h4>
+					<pre>
+						<code datatrim>
+&lt;text x=&quot;50%&quot; y=&quot;50%&quot; font-size=&quot;300px&quot; text-anchor=&quot;middle&quot;&gt;
+Here&rsquor;s some vertically-centered text!&lt;/text&gt;
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Animated text fill by Cesar C</h2>
+					<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="cesar2535" data-slug-hash="ByYXpN" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Animated text fill with svg text practice">
+						<span>See the Pen <a href="https://codepen.io/cesar2535/pen/ByYXpN/">
+						Animated text fill with svg text practice</a> by Cesar C. (<a href="https://codepen.io/cesar2535">@cesar2535</a>)
 						on <a href="https://codepen.io">CodePen</a>.</span>
 					</p>
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 				</section>
 				<section>
-					<h1>Twig Include</h1>
-					<h3>FE Developer at meltmedia</h3>
-					<h3>Twitter: @AudreyBrockhaus</h3>
-					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+						<h2>SVG Text Mask w/ Video Fill by Dudley Storey</h2>
+						<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="dudleystorey" data-slug-hash="QvvEYQ" data-preview="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="SVG Text Mask w/ Video Fill">
+							<span>See the Pen <a href="https://codepen.io/dudleystorey/pen/QvvEYQ/">
+							SVG Text Mask w/ Video Fill</a> by Dudley Storey (<a href="https://codepen.io/dudleystorey">@dudleystorey</a>)
+							on <a href="https://codepen.io">CodePen</a>.</span>
+						</p>
+						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					</section>
+				<section>
+					<h4>Raster Images in SVG</h4>
+					<pre>
+						<code datatrim>
+&lt;image xlink:href=&quot;logo.png&quot; height=&quot;200&quot; width=&quot;200&quot; 
+x=&quot;0&quot; y=&quot;0&quot; /&gt; 	
+						</code>
+					</pre>
+				</section>
+				<section data-background-image="lib/img/circle-bg-01.svg">
+					<h2 class="squiggle-h2">Bringing it all together</h2>
+						<p class="small"><em>more is more and less is a bore</em></p>
+				</section>
+				<!-- <section class="small">
+						<h1>Going Further:</h1>
+						<ul>
+							<li><strong>Replace icon fonts with inline SVG:</strong> It'll be more performant and more flexible. 'nuff said.</li>
+							<li><strong>Animating SVG with JavaScript:</strong>
+								<a href="https://greensock.com/gsap" class="block">GreenSock Animation Platform (GSAP):</a><p>Super-performant HTML5 animation library that morphs paths, creates timeline animations, and fixes cross-browser animation problems</p>
+								<a href="https://d3js.org/" class="block">Data-Driven Documents ('D3' aka d3js)</a><p>For complex data visualization</p>
+							</li>
+						</ul>
+				</section> -->
+				<section class="small">
+						<h2>Resources & References from this talk:</h2>
+						<ul>
+							<li><strong>Examples: </strong>Simple animated SVG progress-bar &amp; Color-changing icons on CodePen:
+								<a href="https://codepen.io/audreybrockhaus" class="block">https://codepen.io/audreybrockhaus</a>
+							</li>
+							<li>Una Kravets on SVG Duotone effect:
+								<a href="https://alistapart.com/article/finessing-fecolormatrix" class="block">https://alistapart.com/article/finessing-fecolormatrix</a>
+							</li>
+						</ul>
+						<p>&nbsp;</p>
+						<h2>Handy Modules:</h2>
+						<ul>
+							<li>Twig Field Value: 
+								<a href="https://www.drupal.org/project/twig_field_value" class="block">https://www.drupal.org/project/twig_field_value</a></li>
+							<li>Color Field: 
+								<a href="https://www.drupal.org/project/color_field" class="block">https://www.drupal.org/project/color_field</a></li>
+						</ul>
 				</section>
 				<section>
-					<h1>Audrey Brockhaus</h1>
-					<h3>FE Developer at meltmedia</h3>
-					<h3>Twitter: @AudreyBrockhaus</h3>
-					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+						<h1>Thank you</h1>
+						<p>Design love from:</p>
+						<h2>Adrienne Hodges &amp; Abby Blue</h2>
+						
+						<p>Icons from:</p>
+						<h2>icons8.com</h2>
 				</section>
 				<section>
-					<h1>Audrey Brockhaus</h1>
-					<h3>FE Developer at meltmedia</h3>
-					<h3>Twitter: @AudreyBrockhaus</h3>
-					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
-				</section>
-				<section>
-					<h1>Audrey Brockhaus</h1>
-					<h3>FE Developer at meltmedia</h3>
-					<h3>Twitter: @AudreyBrockhaus</h3>
-					<h3>I ♥ CSS, SVG, and doing questionable things in Twig templates</h3>
+					<h1 class="splash"><div class="before">
+						<div class="scroll-left">
+						</div>
+					</div>
+					<span class="white animated block">Join us tomorrow!</span>
+					<div class="after">
+						<div class="scroll-right">
+						</div>
+					</div></h1>
+					<h1>Contribution Sprints</h1>
+					<h2>Friday, April 13, 2018</h2>
+					<table class="last">
+						<tr>
+							<td width="33%"><h2>Mentored 
+									Core sprint
+									</h2></td>
+							<td width="34%"><h2>First time
+									sprinter workshop
+									</h2></td>
+							<td width="33%"><h2>General
+									sprint
+									</h2></td>
+						</tr>
+						<tr>
+							<td>9:00-18:00<br/>
+									Room: 103
+									</td>
+							<td>9:00-12:00<br/>
+									Room: 101
+									</td>
+							<td>9:00-18:00<br/>
+									Room: 104
+									</td>
+						</tr>
+					</table>
 				</section>
 			</div>
+			<div class="footer">
+				<p class="light"><img src="lib/img/twitter.svg" alt="" class="icon"><img src="lib/img/github.svg" alt="" class="icon"><img src="lib/img/codepen.svg" alt="" class="icon">AUDREYBROCKHAUS</p>
+			</div>
 		</div>
+
+<svg>
+		<defs>
+			 <filter id="blur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="5,5" />
+			</filter>
+			<filter id="motionBlur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10,0" />
+			</filter>
+			<filter id="grayscale">
+				<feColorMatrix type="saturate" values="0.10"/>
+			</filter>
+			<filter id="sepia" color-interpolation-filters="sRGB">
+		<feColorMatrix type="luminanceToAlpha"/>
+		<feComponentTransfer >
+			<feFuncA type="table" tableValues="0 .2 0.5 1 1 1 0.5 .2 0"/>
+		</feComponentTransfer>
+	 <feComposite operator="in" in="SourceGraphic"/>
+		 <feColorMatrix type="matrix" result="sepia-clip"
+		values="0.39 0.769 0.189 0  0 
+						0.349 0.686 0.168 0  0  
+						0.272 0.534 0.131 0  0 
+							0  0 0 1  0" />
+	
+		<feColorMatrix in="SourceGraphic" type="matrix" result="gscale"
+									values="0.2126 0.7152 0.0722 0 0 
+													0.2126 0.7152 0.0722 0 0 
+													0.2126 0.7152 0.0722 0 0 
+													0 0 0 1 0" />
+		<feComposite operator="over" in="sepia-clip" in2="gscale"/>
+	</filter>
+			<filter id="duotone">
+						<feColorMatrix type="matrix" result="grayscale"
+							values="1 0 0 0 0
+											1 0 0 0 0
+											1 0 0 0 0
+											0 0 0 1 0" />
+						
+						<feComponentTransfer color-interpolation-filters="sRGB" result="duotone_magenta_gold">
+							<feFuncR type="table" tableValues="0.7411764706 0.9882352941"></feFuncR>
+							<feFuncG type="table" tableValues="0.0431372549 0.7333333333"></feFuncG>
+							<feFuncB type="table" tableValues="0.568627451 0.05098039216"></feFuncB>
+							<feFuncA type="table" tableValues="0 1"></feFuncA>
+						</feComponentTransfer> 
+					</filter>
+		</defs>
+	</svg>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
@@ -156,5 +550,25 @@
 				]
 			});
 		</script>
+		<script>
+		function loopClasses() {
+  var $img = $('#filter img');
+  var classArray = ['grayscale', 'sepia', 'blur', 'motionBlur', 'duotone', 'none'];
+  
+  setInterval(() => {
+    
+    var randomNumber = [Math.floor(Math.random()*classArray.length)];
+ 
+    var colorClass = classArray[randomNumber];
+    
+    $img.removeClass();
+    
+    $img.addClass(colorClass);
+
+  }, 1500)
+};
+
+loopClasses();
+</script>
 	</body>
 </html>
