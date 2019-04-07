@@ -59,11 +59,22 @@
 						</div>
 					</div>
 					<aside class="notes">
-						A little bit about me. My skills are in the front end of the front end-html--I love taking designs and breaking them out into HTML, CSS, and presentational javascipt. So in drupal terms, I am a themer. I was introduced to Drupal 
+						<ul>
+							<li>FE Dev at meltmedia</li>
+							<li>Interests in HTML, CSS, presentaional JavaScript. Making designs into code.</li>
+							<li>In drupal terms, a themer</li>
+							<li>drupal 8 great for someone like me</li>
+						</ul>
 					</aside>
 				</section>
 				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<img src="lib/img/me3.jpg" alt="">
+					<aside class="notes">
+						<ul>
+							<li>Drupal 8 allows me to play with rich, dynamic data in a really low-code way in TWIG templates</li>
+							<li>One area I love to experiment with in twig templates is SVG</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h4>Differences between SVG and other web&nbsp;image&nbsp;formats</h4>
@@ -97,6 +108,12 @@
 							</td>
 						</tr>
 					</table>
+					<aside class="notes">
+						<ul>
+							<li>Most developers know that SVG is the vector image format for the web</li>
+							<li>There are other important differences between SVG and raster images that give us opportunities to do cool stuff in the browser and in Drupal Themes.</li>
+						</ul>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<div class="after-block">
@@ -108,6 +125,12 @@
 						<div class="scroll-right">
 						</div>
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>If you’re a frontend developer you may have seen some crazy examples on Twitter or CodePen of things you can do with SVG.</li>
+							<li>I'm going to show you a couple of examples that specifically take advantage of the fact that SVG can respond to user events in the browser.</li>
+						</ul>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<h4>(Happy ↔ Sad) by Chris Gannon</h4>
@@ -117,15 +140,27 @@
 						on <a href="https://codepen.io">CodePen</a>.</span>
 					</p>
 					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<aside class="notes">
+						<ul>
+							<li>This SVG is animated with javascript and responds to user clicks.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h4>SVG interactive web by Blaz Kemperle</h4>
-					<!-- <p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="blazicke" data-slug-hash="jyPVda" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Svg Interactive Web">
+					<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="blazicke" data-slug-hash="jyPVda" data-preview="true" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Svg Interactive Web">
 						<span>See the Pen <a href="https://codepen.io/blazicke/pen/jyPVda/">
 						Svg Interactive Web</a> by Blaz Kemperle (<a href="https://codepen.io/blazicke">@blazicke</a>)
 						on <a href="https://codepen.io">CodePen</a>.</span>
 					</p>
-					<script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<aside class="notes">
+						<ul>
+							<li>This example uses javascript to add dots and lines to an SVG in the html. </li>
+							<li>Then those dots and lines respond to the user's mouse</li>
+							<li>Two examples have in common that the SVG is INLINE in the html. I will explain what that means.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 						<h1><span class="white light">Using SVG:</span> <span class="black">Easy Mode</span></h1><img src="lib/img/squiggle.svg" alt="" class="block centered">
@@ -134,6 +169,12 @@
 &lt;img src=&quot;picture.svg&quot;&gt;
 							</code>
 						</pre>
+					<aside class="notes">
+						<ul>
+							<li>This is NOT inline. This is the simplest way to use SVG on your site: include it an image tag, just as you would with a raster image</li>
+							<li>This gives you the basic benefits of SVG--it's vector so it looks sharp on every screen at any size, and it tends to have a smaller filesize than raster graphics.</li>
+						</ul>
+					</aside>	
 				</section>
 				<section>
 						<h1><span class="white light">Using SVG:</span> <span class="black">Fun Mode </span></h1><img src="lib/img/squiggle.svg" alt="" class="block centered">
@@ -142,9 +183,27 @@
 &lt;ul&gt;&#10; &lt;li&gt;&#10;  &lt;a href=&quot;/home&quot;&gt;&#10;   &lt;svg viewBox=&quot;0 0 200 200&quot; width=&quot;400&quot;  height=&quot;400&quot;&#10;   xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&#10;    &lt;circle cx=&quot;102&quot; cy=&quot;100&quot; fill=&quot;#ff0&quot; r=&quot;78&quot;&#10;    stroke=&quot;#000&quot; stroke-width=&quot;3&quot;/&gt;&#10;...etc.
 						</code>
 						</pre>
+					<aside class="notes">
+						<ul>
+							<li>BUT, when you inline the svg, that is, when you put the svg code directly into your html</li>
+							<li>browser gives you access to the SVG’s DOM.</li>
+							<li>Style and animate with CSS and Javascript</li>
+							<li>respond to user events like hover and click</li>
+							<li>super-useful if you want to use SVG as elements in UI</li>
+						</ul>
+					</aside>	
 				</section>
 				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<img src="lib/img/code.png" alt="">
+					<aside class="notes">
+						<ul>
+							<li>Naturally I wanted to do cool things like that in my drupal themes.</li>
+							<li>Thus was born the ugliest twig templates in the world</li>
+							<li>Real template--I wasn't trying to do anything fancy, just animate some icons using some css transitions.</li>
+							<li>but my templates quickly became bloated with svg markup.</li>
+							<li>other developers don't want to look at it.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h1 class="light">Twig Includes</h1>
@@ -155,6 +214,14 @@
 							</code>
 						</pre>
 						<p>&#8593; points to docroot</p>
+						<aside class="notes">
+								<ul>
+									<li>So my first tip for using inline SVG in drupal 8 is to take advantage of TWIG's include function.</li>
+									<li>Include will print the SVG inline in the rendered HTML, but you won't have to look at it while theming.</li>
+									<li>By default points to docroot</li>
+									<li>which is almost certainly not where you want to store your SVG files</li>
+								</ul>		
+						</aside>
 					</section>
 					<section>	
 						<pre>
@@ -163,6 +230,11 @@
 							</code>
 						</pre>
 						<p>&#8593; points to theme’s templates folder</p>
+						<aside class="notes">
+							<ul>
+								<li>Use the theme namespace to point to theme's templates folder</li>
+							</ul>
+						</aside>
 					</section>
 					<section>	
 						<pre>
@@ -171,16 +243,37 @@
 							</code>
 						</pre>
 						<p>&#8593; points to theme’s images folder</p>
+						<aside class="notes">
+							<ul>
+									<li>Hop up a step to point to theme's images folder.</li>
+									<li>Later on I’ll discuss using twig within the svg markup, so I’ll just mention now that files included this way will be rendered, so you can include twig functions and statements in your SVG and still use the include to pull them into your template.</li>
+							</ul>
+						</aside>
 					</section>
 				</section>
 				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<img src="lib/img/code2.png" alt="">
+					<aside class="notes">
+						<p>This is the same template I showed you before, using include. Much easier to look at.</p>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<h2 class="squiggle-h2">Anatomy of an SVG</h2>
+					<aside class="notes">
+						<ul>
+							<li>Now that I've shown you how not to have to look at SVG markup...let's look at some SVG markup.</li>
+							<li>And while we are in here keep an eye out for opportunities to customize with values from the database</li>
+						</ul>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<img src="lib/img/png.png" alt="">
+					<aside class="notes">
+						<ul>
+							<li>This is a PNG.</li>
+							<li>Gives you a clear message that you should not try to edit this by hand.</li>
+						</ul>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/squiggle-bg-01.svg" data-background-size="contain">
 					<p class="codepen" data-height="460" data-theme-id="36307" data-default-tab="html,result" data-user="audreybrockhaus" data-slug-hash="pYEamK" data-editable="true" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Simple SVG Smiley Face">
@@ -189,13 +282,43 @@
 							on <a href="https://codepen.io">CodePen</a>.</span>
 						</p>
 						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						<aside class="notes">
+							<ul>
+								<li>What you see when you open SVG in code editor is much friendlier.</li>
+								<li>On the left is code, on the right is the SVG drawn by the browser.</li>
+								<li>Going to walk through the code a bit.</li>
+								<li>SVG Root element with viewbox attribute.</li>
+								<li>The viewBox is an attribute of svg that determines the coordinate system and aspect ratio of the SVG. Viewbox defines the canvas that elements within the SVG are drawn on. The four values you see there are min x, min y, width or max X, and height or max y. Coordinates within the SVG are relative to the viewbox. This is totally independent of the width and height of the SVG on the page.</li>
+								<li>Next up we start in on the paths and shapes that make up our smiley face image. To make an analogy to html, these elements are “absolutely positioned” within the SVG’s viewbox.</li>
+								<li>like absolutely positioned elements in HTML, Items that are defined at the top of the file, like the yellow circle, appear behind elements that are defined below them, like the eyes and mouth. (MOVE ONE AND DEMONSTRATE)</li>
+								<li>FIRST element is the yellow circle. it has x and y coordinates and a radius. (ADJUST ONE)</li>
+								<li>The G tag is for grouping elements inside of it so you can manipulate and style them all at once. I point it out because you’ll notice that tags within the SVG can have classes and IDs just like HTML elements do.</li>
+								<li>Path: The path is the mouth in this example. The part beginning with D is the path definition. In theory you can decipher this and edit this by hand but I usually leave that part up to Sketch or Illustrator, or a javascript animation library.</li>
+								<li>SVG conveniently uses HTML/CSS syntax for styling, but the properties, like Fill and Stroke, are unique to SVG.</li>
+							</ul>
+						</aside>
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<h2 class="squiggle-h2">Animate your inline SVG with CSS</h2>
+					<aside class="notes">
+						<ul>
+							<li>I'm going to show you an example of using CSS to style an inline SVG</li>
+							<li>So, I’m going to open up my practice site. It is a cat rescue site with an adoption interest form that is paginated. As the user progresses through the form, there is a class applied to the parent container.</li>
+							<li>Here I am leveraging those classes to create a simple progress bar that is animated with CSS transitions.</li>
+							<li>Notice I did nothing special to the SVG--I just needed to include it inline so </li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h1>“Propertunities” &amp; “Attribilities”</h1>
 					<p class="small"><em>I’m so sorry</em></p>
+					<aside class="notes">
+						<ul>
+							<li>
+									So, I mentioned earlier that you can use twig within the body of the SVG itself. There are some parts of an SVG that can very easily be set with field values from the database.
+							</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h4>Common SVG Presentation Attributes for Shapes</h4>
@@ -261,11 +384,28 @@
 							</td>
 						</tr>
 					</table>
+					<aside class="notes">
+						<ul>
+							<li>As we saw in the smiley face example, paths in SVG have properties and attributes that are the same or similar to CSS properties.</li>
+							<li>These are really low-hanging fruit for setting with field data in twig.</li>
+							<li>With the colorfield module you can set fill and stroke</li>
+							<li>Opacity and stroke-width take simple number values.</li>
+							<li>Let's look at an example of where I set some simple values on a client site.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h4>Super-average icons</h4>
 					<img src="lib/img/teal-icons.png" alt="">
 					<h4>....not so easy to implement</h4>
+					<aside class="notes">
+						<ul>
+							<li>I worked on a client site that had different product lines that each had their own color. Headings and icons would be color-coded according to the product line in question. So you can see this guy is teal.</li>
+							<li>Of course, you can imagine that the design only actually included one color of icon.</li>
+							<li>So my question was: how do we implement this?</li>
+							<li>Unfortunately, because the icons in the design were custom and were not 1-color, an icon font was not an option.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2><span class="light">Super-average icons:</span> Potential structure</h2>
@@ -301,6 +441,13 @@
 							</td>
 						</tr>
 					</table>
+					<aside class="notes">
+						<ul>
+							<li>Our goal was to make it easy for the client to add new product lines through the UI.</li>
+							<li>We might have gone with a structure like this, where each icon needed to be re-uploaded in the new color every time a new product line was added.</li>
+							<li>BUT, grunt work like this puts alot of psychological wear-and-tear on designers, content editors, or god forbid the DEVELOPERS that need to re-save the icons out.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h4>Using variables in SVG</h4>
@@ -311,16 +458,28 @@ d=&quot;M256,512C114.842,512,0,397.158,0,256c0-62.431,22.727-
 122.565,63.994-169.326c5.504-6.237,15....12z&quot;/&gt;					
 						</code>
 					</pre>
-					<p class="small">Example code using Color Field Module and Field Value module</p> 
+					<p class="small">Example code using Color Field Module and Field Value module</p>
+					<aside class="notes">
+							<ul>
+								<li>Instead, I included the SVG icons inline in the templates that required them, and simply passed the color as a variable into the SVG.</li>
+								<li>You can see the twig here setting the fill value on a path.</li>
+								<li>The dark and light variations of the primary color were taken care of with SVG filters, which I will dive into in a few minutes.</li>
+							</ul>
+						</aside> 
 				</section>
 				<section>
-						<h2>Color-flexible icons</h2>
-						<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="audreybrockhaus" data-slug-hash="zbMXZd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Color-Flexible Icons">
-							<span>See the Pen <a href="https://codepen.io/audreybrockhaus/pen/zbMXZd/">
-							Color-Flexible Icons</a> by Audrey Brockhaus (<a href="https://codepen.io/audreybrockhaus">@audreybrockhaus</a>)
-							on <a href="https://codepen.io">CodePen</a>.</span>
-						</p>
-						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<h2>Color-flexible icons</h2>
+					<p class="codepen" data-height="450" data-theme-id="36307" data-default-tab="result" data-user="audreybrockhaus" data-slug-hash="zbMXZd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Color-Flexible Icons">
+						<span>See the Pen <a href="https://codepen.io/audreybrockhaus/pen/zbMXZd/">
+						Color-Flexible Icons</a> by Audrey Brockhaus (<a href="https://codepen.io/audreybrockhaus">@audreybrockhaus</a>)
+						on <a href="https://codepen.io">CodePen</a>.</span>
+					</p>
+					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<aside class="notes">
+						<ul>
+							<li>So the same icons can appear whatever color is needed.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2><span class="light">Super-average Icons:</span> Structure with inline&nbsp;SVG</h2>
@@ -356,13 +515,63 @@ d=&quot;M256,512C114.842,512,0,397.158,0,256c0-62.431,22.727-
 							</td>
 						</tr>
 					</table>
+					<aside class="notes">
+						<ul>
+							<li>And you can see with this method the field structure is drastically simplified.</li>
+							<li>In doing this we ended up with a much more streamlined experience for content editors, and guaranteed a consistent result between product lines.</li>
+						</ul>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<h2 class="squiggle-h2">Custom Avatars</h2>
+					<aside class="notes">
+						<ul>
+							<li>Now I’m going to move over to drupal to show you a more interesting example on the cat rescue site!</li>
+						</ul>
+					</aside>
 				</section>
 				<section id="filter">
 					<h1><span class="white light">SVG</span> <span class="black">Filters</span></h1>
 					<img src="lib/img/daisy.jpg" alt="" width="850">
+					<aside class="notes">
+						<ul>
+							<li>You can achieve many photoshop-like effects with SVG filters</li>
+							<li>some shown here include a duotone effect and a sepia effect</li>
+							<li>The key being, with SVG, that the filters are applied to dynamic content—your users can upload a normal profile picture, you can apply effects to it, and then down the road when you decide maybe that your sepia-tone thing is played out, you can remove that filter in your theme without worrying about images with hardcoded effects on them in the database.</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h1><span class="white light">SVG</span> <span class="black">Filters</span></h1>
+					<section>
+					<pre>
+						<code datatrim>
+&lt;filter id=&quot;lightenAndSaturate&quot;&gt;&#10; &lt;feColorMatrix type=&quot;matrix&quot; result=&quot;lightened&quot;&#10;  values=&quot; 2   0   0   0   0&#10;           0   2   0   0   0&#10;           0   0   2   0   0&#10;           0   0   0   2   0 &quot;/&gt;&#10; &lt;feColorMatrix type=&quot;saturate&quot; result=&quot;saturated&quot; values=&quot;1.3&quot; /&gt;&#10;&lt;/filter&gt;
+</code>
+					</pre>
+					<aside class="notes">
+							<ul>
+								<li>Here is the code. The filter SVG element is a container for Filter Effects--the FE here stands for filter effect. The filter tag has an ID on it which you use to refer to the filter, either elsewhere in your SVG or in your CSS.</li>
+								<li>
+									You do not need to memorize the syntax of the filter effects--I certainly haven't, I look at the mozilla documentation every time. This one is doing XXX
+								</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<pre>
+							<code datatrim>
+filter: url(#lightenAndSaturate);
+							</code>
+						</pre>
+						<aside class="notes">
+							<ul>
+									<li>This is how you would apply the filter to an element from your CSS</li>
+									<li>The SVG does not need to be inline to use filter effects, providing the path to the file in the CSS will work.</li>
+									<li>In example I am am about to show you I am using a filter from an inline SVG.</li>
+							</ul>
+						</aside>
+					</section>
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<h2 class="squiggle-h2">SVG Text and Raster Images</h2>
@@ -375,6 +584,12 @@ d=&quot;M256,512C114.842,512,0,397.158,0,256c0-62.431,22.727-
 Here&rsquor;s some vertically-centered text!&lt;/text&gt;
 						</code>
 					</pre>
+					<aside class="notes">
+						<ul>
+							<li>Text in SVG is really very cool to use for heavily designed text like page-headings. Text in SVG has attributes that text in html does not. 
+							</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Animated text fill by Cesar C</h2>
@@ -384,6 +599,11 @@ Here&rsquor;s some vertically-centered text!&lt;/text&gt;
 						on <a href="https://codepen.io">CodePen</a>.</span>
 					</p>
 					<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+					<aside class="notes">
+						<ul>
+								<li>Unlike text baked into raster images, SVG text is selectable and can be read by screenreaders.</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 						<h2>SVG Text Mask w/ Video Fill by Dudley Storey</h2>
@@ -393,6 +613,11 @@ Here&rsquor;s some vertically-centered text!&lt;/text&gt;
 							on <a href="https://codepen.io">CodePen</a>.</span>
 						</p>
 						<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+						<aside class="notes">
+							<li>You would only want to use text in SVG for short passages like names and other labels that will fit within one line</li>
+							<li>because although text in SVG scales beautifully, it cannot do line-wrapping!</li>
+							<li>When you include your SVG inline in a template, your SVG can use the same fonts as the rest of your webpage.</li>
+						</aside>
 					</section>
 				<section>
 					<h4>Raster Images in SVG</h4>
@@ -402,10 +627,20 @@ Here&rsquor;s some vertically-centered text!&lt;/text&gt;
 x=&quot;0&quot; y=&quot;0&quot; /&gt; 	
 						</code>
 					</pre>
+					<aside class="notes">
+						<ul>
+							<li>You can also include raster images in your SVG using SVG’s IMAGE tag.</li>
+							<li>images will remain raster, but they scale with your SVG and are handy to be manipulated with some cool SVG filters, clip-masks and effects.</li>
+							<li>This is the syntax you would use to include an image in your SVG--notice that the image tag is actually spelled-out “IMAGE” rather than IMG.</li>
+						</ul>
+					</aside>
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<h2 class="squiggle-h2">Bringing it all together</h2>
 						<p class="small"><em>more is more and less is a bore</em></p>
+					<aside class="notes">
+							Now I’m going to jump back to the cat rescue site to show you text and raster images working together to make an eye-catching (or eye-MELTING) heading.
+					</aside>	
 				</section>
 				<!-- <section class="small">
 						<h1>Going Further:</h1>
@@ -438,11 +673,26 @@ x=&quot;0&quot; y=&quot;0&quot; /&gt;
 				</section>
 				<section>
 						<h1>Thank you</h1>
-						<p>Design love from:</p>
-						<h2>Adrienne Hodges &amp; Abby Blue</h2>
-						
-						<p>Icons from:</p>
-						<h2>icons8.com</h2>
+						<div class="small">
+							<p>Design love from:</p>
+							<h2>Adrienne Hodges &amp; Abby Blue</h2>
+							<p>&nbsp;</p>
+							<p>Support &amp; encouragement from:</p>
+							<h2>meltmedia</h2>
+							<p>&nbsp;</p>
+							<p>Icons from:</p>
+							<h2>icons8.com</h2>
+						</div>
+						<aside class="notes">
+							<ul>
+								<li>During this talk I have only scratched the surface of what you can do with inline SVG.</li>
+								<li>None of the code I used was anything more complicated than an if statment in Twig</li>
+								<li>I hope you leave here today unafraid to look inside the SVG file and play around.</li>
+								<li>you will find SO MANY MORE properties and attributes that are easy to modify to customize your content and </li>
+								<li>you may come to consider SVG an amazing extension of your Twig templates. 	</li>
+								<li>Thank you!</li>
+							</ul>							
+						</aside>
 				</section>
 				<section>
 					<h1 class="splash"><div class="before">
