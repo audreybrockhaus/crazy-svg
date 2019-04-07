@@ -598,3 +598,24 @@ table.last, .reveal table.last td, table.last h2{
 #filter img.none{
   filter: none;
 }
+/* body .gist .highlight {
+  font-size: 18px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  font-size: inherit;
+}
+
+.gist .gist-meta{
+  color: transparent !important;
+}
+.gist .gist-meta a{
+  color: black !important;
+} */
+
+.gist .gist-meta a:last-child{
+  display: none !important;
+}
+
+

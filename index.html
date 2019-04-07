@@ -115,6 +115,12 @@
 						</ul>
 					</aside>
 				</section>
+				<section>
+					<img src="lib/img/caniuse.png" alt="">
+					<aside class="notes">
+						A quick note: SVG was bown in 1998, so it may be older than some folks in this room. It did take a long time for browsers to fully support SVG, and I often encounter doubts about browser support for SVG, but as you can see here in this recent screenshot from caniuse, unless you need to support IE 8 and 9 you are good to go. In my anecdotal experience I have had infinitely more cross-browser problems with flexbox than I ever have with SVG.
+					</aside>
+				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<div class="after-block">
 						<div class="scroll-right">
@@ -398,6 +404,7 @@
 					<h4>Super-average icons</h4>
 					<img src="lib/img/teal-icons.png" alt="">
 					<h4>....not so easy to implement</h4>
+					<p><em class="small">(icons changed to protect the guilty)</em></p>
 					<aside class="notes">
 						<ul>
 							<li>I worked on a client site that had different product lines that each had their own color. Headings and icons would be color-coded according to the product line in question. So you can see this guy is teal.</li>
@@ -553,7 +560,7 @@ d=&quot;M256,512C114.842,512,0,397.158,0,256c0-62.431,22.727-
 							<ul>
 								<li>Here is the code. The filter SVG element is a container for Filter Effects--the FE here stands for filter effect. The filter tag has an ID on it which you use to refer to the filter, either elsewhere in your SVG or in your CSS.</li>
 								<li>
-									You do not need to memorize the syntax of the filter effects--I certainly haven't, I look at the mozilla documentation every time. This one is doing XXX
+									You do not need to memorize the syntax of the filter effects--I certainly haven't, I look at the mozilla documentation every time. This one is lightening and then saturating.
 								</li>
 							</ul>
 						</aside>
@@ -575,6 +582,9 @@ filter: url(#lightenAndSaturate);
 				</section>
 				<section data-background-image="lib/img/circle-bg-01.svg">
 					<h2 class="squiggle-h2">SVG Text and Raster Images</h2>
+					<aside class="notes">
+						So far, we have been doing simple conditionals and passing color values to our inline SVG. But SVG can also contain text and raster images, and those just happen to be pretty common types of data fields in drupal. We're going to piece together an eye-catching heading by combining filters, images, and text in an SVG. 
+					</aside>
 				</section>
 				<section>
 					<h4>Text in SVG</h4>
@@ -704,32 +714,38 @@ x=&quot;0&quot; y=&quot;0&quot; /&gt;
 						<div class="scroll-right">
 						</div>
 					</div></h1>
-					<h1>Contribution Sprints</h1>
+					<h1 class="small">Contribution Opportunities</h1>
 					<h2>Friday, April 13, 2018</h2>
 					<table class="last">
 						<tr>
 							<td width="33%"><h2>Mentored 
-									Core sprint
+									Contribution									
 									</h2></td>
-							<td width="34%"><h2>First time
-									sprinter workshop
+							<td width="34%"><h2>First Time
+									Contributor Workshop									
 									</h2></td>
-							<td width="33%"><h2>General
-									sprint
+							<td width="33%"><h2>General<br/>Contribution
 									</h2></td>
 						</tr>
 						<tr>
 							<td>9:00-18:00<br/>
-									Room: 103
+									Room: 602
 									</td>
 							<td>9:00-12:00<br/>
-									Room: 101
+									Room: 606
 									</td>
 							<td>9:00-18:00<br/>
-									Room: 104
+									Room: 6A
 									</td>
 						</tr>
 					</table>
+				</section>
+				<section>
+					<h2>What did you think?</h2>
+					<h5 class="small">Locate this session at the DrupalCon Seattle website:</h5>
+					<p class="small">http://seattle2019.drupal.org/schedule<br/>&nbsp;</p>
+					<h5 class="small">Take the Survey</h5>
+					<p class="small">https://www.surveymonkey.com/r/DrupalConSeattle</p>
 				</section>
 			</div>
 			<div class="footer">
